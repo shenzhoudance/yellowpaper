@@ -126,3 +126,15 @@
 		(value3 != 0) **?** (value1 * value2) % value3 **:** 0
     
 ---------------------
+
+0x0a    EXP
+	Exponential operation.
+  
+	Input Args
+		* value1 - base value  
+		* value2 - exponent value
+    
+	Return 
+		value1 ^ value2
+    
+---------------------
