@@ -73,6 +73,30 @@
 		* value2 - second value
     
 	Return 
-		(value1 == -2^255 && value2 == -1) ? -2^255 : (value2 == 0) ? 0 : sgn(value1/value2) * value1/value2
+		(value1 == -2^255 **&&** value2 == -1) ? -2^255 : (value2 == 0) ? 0 : **sgn** (value1/value2) * value1/value2
+    
+---------------------
+
+0x06    MOD
+	Modulo remainder operation.
+  
+	Input Args
+		* value1 - first value  
+		* value2 - second value
+    
+	Return 
+		(value2 != 0) ? value1 % value2 : 0
+    
+---------------------
+
+0x07    SMOD
+	Signed modulo remainder operation. Where all values are treated as two’s complement signed 256-bit integers.
+  
+	Input Args
+		* value1 - first value  
+		* value2 - second value
+    
+	Return 
+		(value2 != 0) ? **sgn** (value1) * (value1 % value2) : 0
     
 ---------------------
