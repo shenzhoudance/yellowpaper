@@ -100,3 +100,16 @@
 		(value2 != 0) **?** **sgn** (value1) * (value1 % value2) **:** 0
     
 ---------------------
+
+0x08    ADDMOD
+	Modulo addition operation. All intermediate calculations of this operation are not subject to the 2^256 modulo.
+  
+	Input Args
+		* value1 - first value  
+		* value2 - second value
+		* value3 - module
+    
+	Return 
+		(value3 != 0) **?** (value1 + value2) % value3 **:** 0
+    
+---------------------
