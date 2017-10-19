@@ -138,3 +138,74 @@
 		value1 ^ value2
     
 ---------------------
+
+0x10    LT
+	Less-than comparision.
+  
+	Input Args
+		* value1 - first value
+		* value2 - second value
+    
+	Return 
+		(value1 < value2) **?** 1 : 0
+    
+---------------------
+
+0x11    GT
+	Greater-than comparision.
+  
+	Input Args
+		* value1 - first value
+		* value2 - second value
+    
+	Return 
+		(value1 > value2) **?** 1 : 0
+    
+---------------------
+
+0x12    SLT
+	Signed less-than comparision. Where all values are treated as two’s complement signed 256-bit integers.
+  
+	Input Args
+		* value1 - first value
+		* value2 - second value
+    
+	Return 
+		(value1 < value2) **?** 1 : 0
+    
+---------------------
+
+0x13    SGT
+	Signed greater-than comparision. Where all values are treated as two’s complement signed 256-bit integers.
+  
+	Input Args
+		* value1 - first value
+		* value2 - second value
+    
+	Return 
+		(value1 > value2) **?** 1 : 0
+    
+---------------------
+
+0x14    EQ
+	Equality comparision.
+  
+	Input Args
+		* value1 - first value
+		* value2 - second value
+    
+	Return 
+		(value1 == value2) **?** 1 : 0
+    
+---------------------
+
+0x15    ISZERO
+	Simple not operator.
+  
+	Input Args
+		* value1 - first value
+    
+	Return 
+		(value1 == 0) **?** 1 : 0
+    
+---------------------
