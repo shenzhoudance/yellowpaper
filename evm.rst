@@ -15,7 +15,7 @@
 
 0x01    ADD
 	Addition operation
-	Pop two arguments from the stack and adds them.
+	Pops two word(32byte) elements from the stack and adds them.
   
 	Input Args
 		* value1 - first value  
@@ -28,7 +28,7 @@
 
 0x02    MUL
 	Multiplication operation.
-	Pop two arguments from the stack and multiplies them.
+	Pops two word(32byte) elements from the stack and multiplies them.
   
 	Input Args
 		* value1 - first value  
@@ -41,7 +41,7 @@
 
 0x03    SUB
 	Subtraction operation.
-	Pop two arguments from the stack and substract them.
+	Pops two word(32byte) elements from the stack and substract them.
   
 	Input Args
 		* value1 - first value   
@@ -54,7 +54,7 @@
 
 0x04    DIV
 	Integer division operation.
-	Pop two arguments from the stack and divide them.
+	Pops two word(32byte) elements from the stack and divide them.
   
 	Input Args
 		* value1 - first value  
@@ -66,7 +66,9 @@
 ---------------------
 
 0x05    SDIV
-	Signed integer division operation (truncated). Pop two arguments from the stack and divide them. Where all values are treated as two’s complement signed 256-bit integers.
+	Signed integer division operation (truncated).
+	Where all values are treated as two’s complement signed 256-bit integers.
+	Pops two word(32byte) elements from the stack and divide them.
   
 	Input Args
 		* value1 - first value  
@@ -79,6 +81,7 @@
 
 0x06    MOD
 	Modulo remainder operation.
+	Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - first value  
@@ -90,7 +93,9 @@
 ---------------------
 
 0x07    SMOD
-	Signed modulo remainder operation. Where all values are treated as two’s complement signed 256-bit integers.
+	Signed modulo remainder operation.
+	Where all values are treated as two’s complement signed 256-bit integers.
+	Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - first value  
@@ -102,7 +107,9 @@
 ---------------------
 
 0x08    ADDMOD
-	Modulo addition operation. All intermediate calculations of this operation are not subject to the 2^256 modulo.
+	Modulo addition operation.
+	All intermediate calculations of this operation are not subject to the 2^256 modulo.
+	Pops three word(32byte) elements from the stack
   
 	Input Args
 		* value1 - first value  
@@ -115,7 +122,9 @@
 ---------------------
 
 0x09    MULMOD
-	Modulo multiplication operation. All intermediate calculations of this operation are not subject to the 2^256 modulo.
+	Modulo multiplication operation.
+	All intermediate calculations of this operation are not subject to the 2^256 modulo.
+	Pops three word(32byte) elements from the stack
   
 	Input Args
 		* value1 - first value  
@@ -128,7 +137,7 @@
 ---------------------
 
 0x0a    EXP
-	Exponential operation.
+	Exponential operation. Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - base value  
@@ -140,7 +149,7 @@
 ---------------------
 
 0x10    LT
-	Less-than comparision.
+	Less-than comparision. Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - first value
@@ -152,7 +161,7 @@
 ---------------------
 
 0x11    GT
-	Greater-than comparision.
+	Greater-than comparision. Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - first value
@@ -164,7 +173,9 @@
 ---------------------
 
 0x12    SLT
-	Signed less-than comparision. Where all values are treated as two’s complement signed 256-bit integers.
+	Signed less-than comparision. 
+	Where all values are treated as two’s complement signed 256-bit integers.
+	Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - first value
@@ -176,7 +187,9 @@
 ---------------------
 
 0x13    SGT
-	Signed greater-than comparision. Where all values are treated as two’s complement signed 256-bit integers.
+	Signed greater-than comparision.
+	Where all values are treated as two’s complement signed 256-bit integers.
+	Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - first value
@@ -189,6 +202,7 @@
 
 0x14    EQ
 	Equality comparision.
+	Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - first value
@@ -201,11 +215,25 @@
 
 0x15    ISZERO
 	Simple not operator.
+	Pops one word(32byte) element from the stack.
   
 	Input Args
 		* value1 - first value
     
 	Return 
 		(value1 == 0) **?** 1 : 0
+    
+---------------------
+
+0x16    AND
+	Bitwise AND operation.
+	Pops two word(32byte) elements from the stack and perform a bitwise && operation.
+  
+	Input Args
+		* value1 - first value
+		* value2 - second value
+    
+	Return 
+		value1 && value2
     
 ---------------------
