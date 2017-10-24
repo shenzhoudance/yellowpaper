@@ -137,7 +137,8 @@
 ---------------------
 
 0x0a    EXP
-	Exponential operation. Pops two word(32byte) elements from the stack.
+	Exponential operation.
+	Pops two word(32byte) elements from the stack.
   
 	Input Args
 		* value1 - base value  
@@ -145,6 +146,20 @@
     
 	Return 
 		value1 ^ value2
+    
+---------------------
+
+0x0b    SIGNEXTEND
+	Extend length of two’s complement signed integer.
+	Pops two word(32byte) elements from the stack.
+  
+	Input Args
+		* value1 - length. Should be in range 0x00 .. 0x20
+		* value2 - original integer value.
+    
+	Return 
+		Replaces all bits of the first **31 - arg** bytes with the first bit of byte number **31 - arg** and the rest of the bytes are copyied from the original.
+		
     
 ---------------------
 
