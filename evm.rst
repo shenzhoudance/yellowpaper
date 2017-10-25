@@ -154,13 +154,15 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - length. Should be in range 0x00 .. 0x20
+		* value1 - length. Should be in range [0x00 ... 0x20]
 		* value2 - original integer value.
     
 	Return 
 		Replaces all bits of the first **31 - arg** bytes with the first bit of byte number **31 - arg** and the rest of the bytes are copyied from the original.
 		
     
+---------------------
+
 ---------------------
 
 0x10    LT
@@ -250,5 +252,55 @@
     
 	Return 
 		value1 && value2
+    
+---------------------
+
+0x17    OR
+	Bitwise OR operation.
+	Pops two word(32byte) elements from the stack and perform a bitwise || operation.
+  
+	Input Args
+		* value1 - first value
+		* value2 - second value
+    
+	Return 
+		value1 || value2
+    
+---------------------
+
+0x18    XOR
+	Bitwise XOR operation.
+	Pops two word(32byte) elements from the stack and perform a bitwise (+) operation.
+  
+	Input Args
+		* value1 - first value
+		* value2 - second value
+    
+	Return 
+		value1 XOR value2
+    
+---------------------
+
+0x19    NOT
+	Bitwise NOT operation.
+	Pops two word(32byte) elements from the stack and perform a bitwise NOT operation.
+  
+	Input Args
+		* value1 - argument to be nagaited
+    
+	Return 
+		!value1
+    
+---------------------
+
+0x1a    BYTE
+	Pops two word(32byte) elements from the stack.
+  
+	Input Args
+		* value1 - byte number. Should be in range [0...32)
+		* value2 - argument
+    
+	Return 
+		(value1 < 32) **?** value2[value1] : 0
     
 ---------------------
