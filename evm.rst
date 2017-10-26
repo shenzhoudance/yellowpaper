@@ -316,7 +316,7 @@
 		* value2 - Length
     
 	Return 
-		sha3(memory(value1)...memory(value1+value2))
+		sha3(memory(value1)...memory(value1 + value2 - 1))
     
 ---------------------
 
