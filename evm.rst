@@ -304,3 +304,19 @@
 		(value1 < 32) **?** value2[value1] : 0
     
 ---------------------
+
+---------------------
+
+0x20    SHA3
+	Compute Keccak-256 hash.
+	Pops two word(32byte) elements from the stack.
+  
+	Input Args
+		* value1 - Index of the first element from memory.
+		* value2 - Length
+    
+	Return 
+		sha3(memory(value1)...memory(value1+value2))
+    
+---------------------
+
