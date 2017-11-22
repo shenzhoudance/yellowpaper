@@ -348,8 +348,7 @@
 
 0x32    BALANCE
 	Get address of currently executing account.
-	This is the sender of original transaction; it is never an account with non-empty
-associated code.
+	This is the sender of original transaction; it is never an account with non-empty associated code.
   
 	Input Args
 		* none
