@@ -320,3 +320,41 @@
     
 ---------------------
 
+---------------------
+
+0x30    ADDRESS
+	Get address of currently executing account.
+	Pops a word(32byte) element from the stack.
+  
+	Input Args
+		* none
+    
+	Return 
+		address (32 bytes)
+    
+---------------------
+
+0x31    BALANCE
+	Get balance of the provided account.
+	Pops a word(32byte) element from the stack.
+  
+	Input Args
+		* value1 - Account address
+    
+	Return 
+		Balance of the account with address value1. 0 if such account does not exist.
+    
+---------------------
+
+0x32    BALANCE
+	Get address of currently executing account.
+	This is the sender of original transaction; it is never an account with non-empty
+associated code.
+  
+	Input Args
+		* none
+    
+	Return 
+		address(32 bytes)
+    
+---------------------
