@@ -346,7 +346,7 @@
     
 ---------------------
 
-0x32    BALANCE
+0x32    ORIGIN
 	Get address of currently executing account.
 	This is the sender of original transaction; it is never an account with non-empty associated code.
   
@@ -355,5 +355,40 @@
     
 	Return 
 		address(32 bytes)
+    
+---------------------
+
+0x33    CALLER
+	Get caller address.
+	This is the address of the account that is directly responsible for this execution.
+  
+	Input Args
+		* none
+    
+	Return 
+		address(32 bytes)
+    
+---------------------
+
+0x34    CALLVALUE
+	Get deposited value by the instruction/transaction responsible for this execution.
+  
+	Input Args
+		* none
+    
+	Return 
+		bigint(32 bytes)
+    
+---------------------
+
+0x35    CALLDATALOAD
+	Get input data of current environment.
+	This pertains to the input data passed with the message call instruction or transaction
+  
+	Input Args
+		* value1 - index (32 bytes)
+    
+	Return 
+		data(32 bytes) (Takes 32 bytes of data from position=value1 from input memory. If memory is not set such byte is 0)
     
 ---------------------
