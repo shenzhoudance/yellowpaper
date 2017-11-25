@@ -383,12 +383,48 @@
 
 0x35    CALLDATALOAD
 	Get input data of current environment.
-	This pertains to the input data passed with the message call instruction or transaction
+	This pertains to the input data passed with the message call instruction or transaction.
   
 	Input Args
 		* value1 - index (32 bytes)
     
 	Return 
 		data(32 bytes) (Takes 32 bytes of data from position=value1 from input memory. If memory is not set such byte is 0)
+    
+---------------------
+
+0x36    CALLDATASIZE
+	Get size of input data in current environment.
+	This pertains to the input data passed with the message call instruction or transaction.
+  
+	Input Args
+		* none
+    
+	Return 
+		data(32 bytes) (The total size of input data in bytes)
+    
+---------------------
+
+0x37    CALLDATACOPY
+	Copy input data in current environment to memory.
+  
+	Input Args
+		* value1 - memory start index
+		* value2 - input memory start index
+		* value3 - length. number of bytes to copy
+    
+	Return 
+		None
+    
+---------------------
+
+0x38    CODESIZE
+	Get size of code running in current environment.
+  
+	Input Args
+		* none
+    
+	Return 
+		data(32 bytes) (The total size of the code of the current contract which called this instruction)
     
 ---------------------
