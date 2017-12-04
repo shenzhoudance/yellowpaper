@@ -428,3 +428,16 @@
 		data(32 bytes) (The total size of the code of the current contract which called this instruction)
     
 ---------------------
+
+0x39    CODECOPY
+	Copy code running in current environment to memory. if bytes of the code not defined 0x00 is copied instead.
+  
+	Input Args
+		* value1 - memory start index.
+		* value2 - current environment code index.
+		* value3 - length. number of bytes to copy
+    
+	Return 
+		none
+    
+---------------------
