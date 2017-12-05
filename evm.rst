@@ -18,10 +18,10 @@
 	Pops two word(32byte) elements from the stack and adds them.
   
 	Input Args
-		* value1 - first value  
-		* value2 - second value
+		* value1 - first value  (32 bytes)
+		* value2 - second value (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		value1 + value2
     
 ---------------------
@@ -31,10 +31,10 @@
 	Pops two word(32byte) elements from the stack and multiplies them.
   
 	Input Args
-		* value1 - first value  
-		* value2 - second value
+		* value1 - first value   (32 bytes)
+		* value2 - second value  (32 bytes) 
     
-	Return 
+	Return (32 bytes)
 		value1 * value2
     
 ---------------------
@@ -44,11 +44,11 @@
 	Pops two word(32byte) elements from the stack and substract them.
   
 	Input Args
-		* value1 - first value   
-		* value2 - second value
+		* value1 - first value   (32 bytes)
+		* value2 - second value  (32 bytes)
     
-	Return 
-		value1 - value2
+	Return (32 bytes)
+		value1 - value2 
     
 ---------------------
 
@@ -57,10 +57,10 @@
 	Pops two word(32byte) elements from the stack and divide them.
   
 	Input Args
-		* value1 - first value  
-		* value2 - second value
+		* value1 - first value  (32 bytes)
+		* value2 - second value (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value2 != 0) **?** value1 / value2 **:** 0
     
 ---------------------
@@ -71,10 +71,10 @@
 	Pops two word(32byte) elements from the stack and divide them.
   
 	Input Args
-		* value1 - first value  
-		* value2 - second value
+		* value1 - first value  (32 bytes)
+		* value2 - second value (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value1 == -2^255 **&&** value2 == -1) **?** -2^255 : (value2 == 0) **?** 0 **:** **sgn** (value1/value2) * value1/value2
     
 ---------------------
@@ -84,10 +84,10 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - first value  
-		* value2 - second value
+		* value1 - first value   (32 bytes)
+		* value2 - second value  (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value2 != 0) **?** value1 % value2 **:** 0
     
 ---------------------
@@ -98,10 +98,10 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - first value  
-		* value2 - second value
+		* value1 - first value  (32 bytes)
+		* value2 - second value (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value2 != 0) **?** **sgn** (value1) * (value1 % value2) **:** 0
     
 ---------------------
@@ -112,11 +112,11 @@
 	Pops three word(32byte) elements from the stack
   
 	Input Args
-		* value1 - first value  
-		* value2 - second value
-		* value3 - module
+		* value1 - first value   (32 bytes)
+		* value2 - second value  (32 bytes)
+		* value3 - module        (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value3 != 0) **?** (value1 + value2) % value3 **:** 0
     
 ---------------------
@@ -127,11 +127,11 @@
 	Pops three word(32byte) elements from the stack
   
 	Input Args
-		* value1 - first value  
-		* value2 - second value
-		* value3 - module
+		* value1 - first value    (32 bytes)
+		* value2 - second value   (32 bytes)
+		* value3 - module         (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value3 != 0) **?** (value1 * value2) % value3 **:** 0
     
 ---------------------
@@ -141,10 +141,10 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - base value  
-		* value2 - exponent value
+		* value1 - base value        (32 bytes)
+		* value2 - exponent value    (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		value1 ^ value2
     
 ---------------------
@@ -154,11 +154,11 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - length. Should be in range [0x00 ... 0x20]
-		* value2 - original integer value.
+		* value1 - length. Should be in range [0x00 ... 0x20]  (32 bytes)
+		* value2 - original integer value. (32 bytes)
     
-	Return 
-		Replaces all bits of the first **31 - arg** bytes with the first bit of byte number **31 - arg** and the rest of the bytes are copyied from the original.
+	Return (32 bytes)
+		Replaces all bits of the first **31 - value1** bytes with the first bit of byte number **31 - value1** and the rest of the bytes are copyied from the original.
 		
     
 ---------------------
@@ -169,10 +169,10 @@
 	Less-than comparision. Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - first value
-		* value2 - second value
+		* value1 - first value    (32 bytes)
+		* value2 - second value   (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value1 < value2) **?** 1 : 0
     
 ---------------------
@@ -181,10 +181,10 @@
 	Greater-than comparision. Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - first value
-		* value2 - second value
+		* value1 - first value    (32 bytes)
+		* value2 - second value   (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value1 > value2) **?** 1 : 0
     
 ---------------------
@@ -195,10 +195,10 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - first value
-		* value2 - second value
+		* value1 - first value    (32 bytes)
+		* value2 - second value   (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value1 < value2) **?** 1 : 0
     
 ---------------------
@@ -209,10 +209,10 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - first value
-		* value2 - second value
+		* value1 - first value    (32 bytes)
+		* value2 - second value   (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value1 > value2) **?** 1 : 0
     
 ---------------------
@@ -222,10 +222,10 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - first value
-		* value2 - second value
+		* value1 - first value  (32 bytes)
+		* value2 - second value (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value1 == value2) **?** 1 : 0
     
 ---------------------
@@ -235,7 +235,7 @@
 	Pops one word(32byte) element from the stack.
   
 	Input Args
-		* value1 - first value
+		* value1 - first value  (32 bytes)
     
 	Return 
 		(value1 == 0) **?** 1 : 0
@@ -247,10 +247,10 @@
 	Pops two word(32byte) elements from the stack and perform a bitwise && operation.
   
 	Input Args
-		* value1 - first value
-		* value2 - second value
+		* value1 - first value   (32 bytes)
+		* value2 - second value  (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		value1 && value2
     
 ---------------------
@@ -260,10 +260,10 @@
 	Pops two word(32byte) elements from the stack and perform a bitwise || operation.
   
 	Input Args
-		* value1 - first value
-		* value2 - second value
+		* value1 - first value   (32 bytes)
+		* value2 - second value  (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		value1 || value2
     
 ---------------------
@@ -273,10 +273,10 @@
 	Pops two word(32byte) elements from the stack and perform a bitwise (+) operation.
   
 	Input Args
-		* value1 - first value
-		* value2 - second value
+		* value1 - first value    (32 bytes)
+		* value2 - second value   (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		value1 XOR value2
     
 ---------------------
@@ -286,9 +286,9 @@
 	Pops two word(32byte) elements from the stack and perform a bitwise NOT operation.
   
 	Input Args
-		* value1 - argument to be nagaited
+		* value1 - argument to be nagaited   (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		!value1
     
 ---------------------
@@ -297,10 +297,10 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - byte number. Should be in range [0...32)
-		* value2 - argument
+		* value1 - byte number. Should be in decimal range [0...32)   (32 bytes)
+		* value2 - argument (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		(value1 < 32) **?** value2[value1] : 0
     
 ---------------------
@@ -312,10 +312,10 @@
 	Pops two word(32byte) elements from the stack.
   
 	Input Args
-		* value1 - Index of the first element from memory.
-		* value2 - Length
+		* value1 - Index of the first element from memory.  (32 bytes)
+		* value2 - Length  (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		sha3(memory(value1)...memory(value1 + value2 - 1))
     
 ---------------------
@@ -329,8 +329,8 @@
 	Input Args
 		* none
     
-	Return 
-		address (32 bytes)
+	Return (32 bytes)
+		address
     
 ---------------------
 
@@ -339,9 +339,9 @@
 	Pops a word(32byte) element from the stack.
   
 	Input Args
-		* value1 - Account address
+		* value1 - Account address  (32 bytes)
     
-	Return 
+	Return (32 bytes)
 		Balance of the account with address value1. 0 if such account does not exist.
     
 ---------------------
@@ -353,8 +353,8 @@
 	Input Args
 		* none
     
-	Return 
-		address(32 bytes)
+	Return (32 bytes)
+		address
     
 ---------------------
 
@@ -365,8 +365,8 @@
 	Input Args
 		* none
     
-	Return 
-		address(32 bytes)
+	Return (32 bytes)
+		address
     
 ---------------------
 
@@ -376,8 +376,8 @@
 	Input Args
 		* none
     
-	Return 
-		bigint(32 bytes)
+	Return (32 bytes)
+		bigint
     
 ---------------------
 
@@ -388,8 +388,8 @@
 	Input Args
 		* value1 - index (32 bytes)
     
-	Return 
-		data(32 bytes) (Takes 32 bytes of data from position=value1 from input memory. If memory is not set such byte is 0)
+	Return (32 bytes)
+		data (Takes 32 bytes of data from position=value1 from input memory. If memory is not set such byte is 0)
     
 ---------------------
 
@@ -400,8 +400,8 @@
 	Input Args
 		* none
     
-	Return 
-		data(32 bytes) (The total size of input data in bytes)
+	Return (32 bytes)
+		data (The total size of input data in bytes)
     
 ---------------------
 
@@ -409,9 +409,9 @@
 	Copy input data in current environment to memory.
   
 	Input Args
-		* value1 - memory start index
-		* value2 - input memory start index
-		* value3 - length. number of bytes to copy
+		* value1 - memory start index			(32 bytes)
+		* value2 - input memory start index		(32 bytes)
+		* value3 - length. number of bytes to copy	(32 bytes)
     
 	Return 
 		None
@@ -424,8 +424,8 @@
 	Input Args
 		* none
     
-	Return 
-		data(32 bytes) (The total size of the code of the current contract which called this instruction)
+	Return (32 bytes)
+		data (The total size of the code of the current contract which called this instruction)
     
 ---------------------
 
@@ -433,9 +433,9 @@
 	Copy code running in current environment to memory. if bytes of the code not defined 0x00 is copied instead.
   
 	Input Args
-		* value1 - memory start index.
-		* value2 - current environment code index.
-		* value3 - length. number of bytes to copy
+		* value1 - memory start index.			(32 bytes)
+		* value2 - current environment code index.	(32 bytes)
+		* value3 - length. number of bytes to copy	(32 bytes)
     
 	Return 
 		none
@@ -448,8 +448,8 @@
 	Input Args
 		* none
     
-	Return 
-		data(32 bytes)
+	Return (32 bytes)
+		data
     
 ---------------------
 
@@ -457,9 +457,9 @@
 	Get size of an account’s code.
   
 	Input Args
-		* value1 - address of the account
+		* value1 - address of the account (32 bytes)
     
-	Return 
-		data(32 bytes) (size of the code of a given account address. 0 if account does not exist)
+	Return (32 bytes)
+		data (size of the code of a given account address. 0 if account does not exist)
     
 ---------------------
