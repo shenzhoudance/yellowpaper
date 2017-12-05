@@ -441,3 +441,25 @@
 		none
     
 ---------------------
+
+0x3a    GASPRICE
+	Get price of gas in current environment. This is gas price specified by the originating transaction.
+  
+	Input Args
+		* none
+    
+	Return 
+		data(32 bytes)
+    
+---------------------
+
+0x3b    EXTCODESIZE
+	Get size of an account’s code.
+  
+	Input Args
+		* value1 - address of the account
+    
+	Return 
+		data(32 bytes) (size of the code of a given account address. 0 if account does not exist)
+    
+---------------------
