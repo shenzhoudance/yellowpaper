@@ -463,3 +463,18 @@
 		data (size of the code of a given account address. 0 if account does not exist)
     
 ---------------------
+
+0x3c    EXTCODECOPY
+	Copy *value4* bytes from *value1* account’s code starting at position *value3* to memory from position *value2*.
+	If code at position is not defined 0x00 byte is copied instead.
+  
+	Input Args
+		* value1 - address (32 bytes)
+		* value2 - memory start index (32 bytes)
+		* value3 - external account (address) code start index (32 bytes)
+		* value4 - number of bytes to copy (32 bytes)
+    
+	Return
+		none
+    
+---------------------
