@@ -478,3 +478,15 @@
 		none
     
 ---------------------
+
+---------------------
+
+0x40    BLOCKHASH
+	Get the hash of one of the 256 most recent complete blocks.
+  
+	Input Args
+		* value1 - block number (32 bytes)
+    
+	Return (32 bytes)
+		(value1 > currentBlockNumber || value1 < currentBlockNumber - 256) ? 0 : blokhash(blocknumber) 
+    
