@@ -483,6 +483,9 @@
 
 0x40    BLOCKHASH
 	Get the hash of one of the 256 most recent complete blocks.
+	Where blockhash(number) is the hash of a block of a particular number, up to a maximum age.
+        0 is left on the stack if the looked for block number is greater than the current block number
+        or more than 256 blocks behind the current block.
   
 	Input Args
 		* value1 - block number (32 bytes)
